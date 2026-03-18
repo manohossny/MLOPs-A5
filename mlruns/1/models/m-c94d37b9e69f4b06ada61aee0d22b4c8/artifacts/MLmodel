@@ -1,0 +1,23 @@
+artifact_path: /Users/manohosny/Downloads/MLOPS A2/mlruns/1/models/m-c94d37b9e69f4b06ada61aee0d22b4c8/artifacts
+flavors:
+  python_function:
+    config:
+      device: null
+    data: data
+    env:
+      conda: conda.yaml
+      virtualenv: python_env.yaml
+    loader_module: mlflow.pytorch
+    pickle_module_name: mlflow.pytorch.pickle_module
+    python_version: 3.11.14
+  pytorch:
+    code: null
+    model_data: data
+    pytorch_version: 2.2.0
+mlflow_version: 3.10.1
+model_id: m-c94d37b9e69f4b06ada61aee0d22b4c8
+model_size_bytes: 5953156
+model_uuid: m-c94d37b9e69f4b06ada61aee0d22b4c8
+prompts: null
+run_id: 8d0a73baf6034e91bdb26dad854a91b3
+utc_time_created: '2026-03-10 11:47:32.277389'

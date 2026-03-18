@@ -1,0 +1,13 @@
+name: env_rl_project
+channels:
+  - pytorch
+  - defaults
+dependencies:
+  - python=3.11
+  - pip
+  - numpy
+  - matplotlib
+  - pytorch::pytorch=2.2.0
+  - pytorch::torchvision=0.17.0
+  - pip:
+    - mlflow
