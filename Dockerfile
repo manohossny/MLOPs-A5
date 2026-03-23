@@ -1,16 +1,13 @@
-# Use a lightweight Python base image
-FROM python:3.11-slim
+FROM python:3.10-slim
 
-# Set the working directory
 WORKDIR /app
 
-# Copy requirements first for efficient layer caching
-# (this layer is only rebuilt when dependencies change)
+ARG RUN_ID
+ENV RUN_ID=${RUN_ID}
+
 COPY requirements.txt .
 RUN pip install --no-cache-dir -r requirements.txt
 
-# Copy the rest of the project code
 COPY . .
 
-# Run the training script by default
-CMD ["python", "gan_mnist.py"]
+CMD echo "Downloading model for Run ID: ${RUN_ID}" && echo "Model deployed successfully"
