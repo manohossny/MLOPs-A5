@@ -36,12 +36,7 @@ jobs:
         run: dvc pull || echo "DVC pull skipped - no remote configured"
 
       - name: Train model
-        run: |
-          if [ "${{ github.event.inputs.force_low_accuracy }}" = "true" ]; then
-            python train.py --force-low-accuracy
-          else
-            python train.py --epochs 5
-          fi
+        run: python train.py ${{ github.event.inputs.force_low_accuracy == 'true' && '--force-low-accuracy' || '--epochs 5' }}
 
       - name: Upload model info
         uses: actions/upload-artifact@v4
