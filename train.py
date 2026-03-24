@@ -96,6 +96,9 @@ def train_and_evaluate(epochs, force_low_accuracy):
         with open("model_info.txt", "w") as f:
             f.write(run.info.run_id)
 
+        with open("accuracy.txt", "w") as f:
+            f.write(str(accuracy))
+
         print(f"Run ID: {run.info.run_id}")
         print(f"Model info saved to model_info.txt")
 
